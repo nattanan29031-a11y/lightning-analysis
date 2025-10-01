@@ -1,0 +1,10 @@
+__pycache__/
+uploads/
+*.pyc
+.venv/
+venv/
+env/
+.env
+.DS_Store
+*.pkl
+*.xlsx

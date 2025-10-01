@@ -1,0 +1,17 @@
+<div id="map">{{ map_html|safe }}</div>
+<table>
+  <tr><th>Tower</th><th>Latitude</th><th>Longitude</th><th>Risk %</th></tr>
+  {% for row in data %}
+    <tr>
+      <td>{{ row.tower }}</td>
+      <td>{{ row.lat }}</td>
+      <td>{{ row.lon }}</td>
+      <td style="background-color: {{ row.color }};">{{ row.risk }}%</td>
+    </tr>
+  {% endfor %}
+</table>
+<canvas id="tripChart"></canvas>
+<script>
+  var ctx = document.getElementById('tripChart').getContext('2d');
+  new Chart(ctx, {/* data from data.trip_stats */});
+</script>

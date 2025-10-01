@@ -1,0 +1,15 @@
+<html lang="th">
+<head><meta charset="UTF-8"/><title>เลือกแนวสายส่ง</title></head>
+<body>
+  <h1>เลือกแนวสายส่ง</h1>
+  <form method="POST" action="/analyze">
+    <label for="line_name">แนวสายส่ง:</label>
+    <select id="line_name" name="line_name">
+      {% for ln in lines %}
+        <option value="{{ ln }}">{{ ln }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">วิเคราะห์</button>
+  </form>
+</body>
+</html>
